@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+html, body, #root {
+  font: 0.9rem sans-serif;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover; /* Adjust the image to cover the entire background */
+  background-position: center; /* Center the image within the background */
+  color: #1e2432;
+  height: 100%;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) );
+  background-size: cover;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  font-weight: 400;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  gap: 5px;
+}
+
+
+.description{
+  font-size: 14px;
+  text-align: center;
+  max-width: 400px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.searching {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search {
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+  font-size: 16px;
+  background: rgba(240, 236, 236, 0.85);
+  color: #333;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  color: rgba(240, 236, 236, 0.85);
+}
+
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 6%;
+  border-radius: 20px;
+  background: rgba(240, 236, 236, 0.85);
+  box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  cursor: pointer;
+  border-radius: 50%; 
+  background-color: #ff8c00; 
+  padding: 5px; 
+  color: white; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close:hover {
+  background-color: #ff6a00; /* Change background color on hover */
+  color: #fff; /* Change icon color on hover */
+}
+
+/* Rest of your styles */
+
+
+p {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+
+.city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #1e2432;
+  text-align: center;
+}
+
+.city sup {
+  font-size: 0.5em;
+}
+
+.city-name {
+  font-size: 2em;
+}
+
+.city-name sup {
+  padding: 0.2em 0.6em;
+  margin-left: 0.2em;
+  border-radius: 30px;
+  color: #fff;
+  background: #ff8c00;
+}
+
+.city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-extra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  gap: 60px;
+}
+
+.humidity-info-extra-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.info-extra-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.wind {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.title {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #ff8c00;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wind-title {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #00aaff; 
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .search {
+      padding: 20px 10%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-icon{
+    font-size: 6rem;
+  }
+
+  .city {
+      padding: 40px 20%;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .heading p {
+    font-size: 14px;
+    text-align: center;
+    max-width: 80%;
   }
 }
