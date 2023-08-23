@@ -34,7 +34,7 @@ const App = () => {
       {!showWeather && (
         <div className="heading">
           <h1>Welcome to the Weather App!</h1>
-          <p>Find current weather conditions for any location</p>
+          <p> Discover the current weather conditions for any location! 🌍</p>
         </div>
       )}
       <div className="searching">
@@ -79,16 +79,16 @@ const App = () => {
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt={weather.weather[0].description}
             />
-            <p>{weather.weather[0].description}</p>
+            <p className="description">{weather.weather[0].description}</p>
           </div>
           <div className="info-extra">
             <div className="humidity-info-extra-sub">
               <img src={humidity} alt="" />
-              <p>{weather.main.humidity}%</p>
+              <p className="title">{weather.main.humidity}%</p>
             </div>
             <div className="info-extra-sub">
               <img src={wind} style={{ width: "px", height: "35px" }} alt="" />
-              <p>{weather.wind.speed} km/h</p>
+              <p className="wind-title">{weather.wind.speed} km/h</p>
             </div>
           </div>
         </div>
